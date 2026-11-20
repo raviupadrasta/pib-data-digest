@@ -1,0 +1,1003 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hi">
+<head id="Head1"><title>
+	Press Release:Press Information Bureau
+</title><link href="css/style.css?v=1" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css?v=1" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css?v=1" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" /><link rel="stylesheet" href="css/style3.1.css" type="text/css" />
+
+
+      <script src="js/jquery.min.js" type="text/javascript"></script>
+
+      <script type="text/javascript">
+            $(document).ready(function () {
+                  function getParameterByName(name) {
+                        var url = window.location.href;
+                        name = name.replace(/[\[\]]/g, '\\$&');
+                        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                              results = regex.exec(url);
+                        if (!results) return null;
+                        if (!results[2]) return '';
+                        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                  }
+                  // Get the IDs from the current page's URL
+                  let prid = parseInt(getParameterByName('PRID'), 10);
+
+                  if (!isNaN(prid) && prid > 0) {
+                        $.ajax({
+                              type: "POST",
+                              url: "AjaxMethod.aspx/UpdatePRHitCount",
+                              async: false,
+                              data: JSON.stringify({ 'PermId': prid }),
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              success: function (response) {
+                                    console.log(response);
+                              },
+                              error: function (error) {
+                                    console.log("Error in AJAX request", error);
+                              }
+                        });
+                  } else {
+                        console.log("Invalid parameters:", prid);
+                  }
+
+            });
+      </script>
+      <style type="text/css">
+            .table-responsive {
+                  width: 100%;
+                  overflow-x: auto;
+            }
+
+            .banner {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  background-color: #000;
+                  color: #fff;
+                  padding: 20px;
+            }
+
+            full-width {
+                  width: 100%;
+            }
+
+            .logo-left, .logo-center, .countdown {
+                  display: flex;
+                  align-items: center;
+            }
+
+                  .logo-left img, .logo-center img {
+                        height: 70px;
+                  }
+
+            .countdown {
+                  text-align: center;
+                  background-color: var(--dbim-text, #150202);
+                  border-radius: 10px;
+                  padding: 10px;
+                  border: 2px solid grey;
+            }
+
+            .firstnumber {
+                  color: #000000;
+                  position: absolute;
+                  top: 50px;
+                  right: 90px;
+                  font-size: 30px;
+            }
+
+            .secondnumber {
+                  position: absolute;
+                  color: #000000;
+                  right: 45px;
+                  top: 50px;
+                  font-size: 30px;
+            }
+
+            .countdown .days {
+                  font-size: 35px;
+                  color: gold;
+            }
+
+            .countdown p {
+                  margin: 0;
+            }
+
+            .countdown .text {
+                  font-size: 16px;
+            }
+
+            a {
+                  word-break: break-all;
+            }
+
+            iframe, img {
+                  max-width: 100%;
+            }
+
+            @media(max-width:1199px) {
+                  .firstnumber {
+                        top: 40px;
+                        right: 72px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 35px;
+                        top: 40px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:990px) {
+                  .firstnumber {
+                        top: 25px;
+                        right: 54px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 25px;
+                        top: 25px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:768px) {
+                  .countdown, .days {
+                        font-size: 12px !important;
+                  }
+
+
+                  .firstnumber {
+                        top: 25%;
+                        right: 8%;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 4.5%;
+                        top: 25%;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:475px) {
+                  .countdown, .days {
+                        font-size: 10px !important;
+                        top: 20%;
+                  }
+
+                  .bannerimgdiv {
+                        padding: 0 !important;
+                  }
+
+                  .bannerimg {
+                        width: 108% !important;
+                  }
+            }
+      </style>
+      <script type="text/javascript">
+            $(function () {
+                  $("[id*=printPDF]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+            $(function () {
+                  $("[id*=printPDFEvent]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+      </script>
+
+      
+
+      <link id="pibConsentCss" href="/css/consent.css?v=8" rel="stylesheet" type="text/css" /><link id="pibFontsCss" href="/css/fonts-noto.css?v=6" rel="stylesheet" type="text/css" /><link id="pibDbimCss" href="/css/dbim.css?v=1120" rel="stylesheet" type="text/css" /><meta property="og:title" content="Union Health Ministry Proposes Amendment to Drugs Rules, 1945 to Provide Regulatory Flexibility for Medicinal Gases, Empty Gelatin Capsules and Disinfectant Fluids" /><meta property="og:url" content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=2338313" /><meta property="og:description" content="Union Ministry of Health and Family Welfare has proposed an amendment to the Drugs Rules, 1945, thro" /><meta property="og:image" content="https:/pib.gov.in/images/indian-emblem.png" />
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="eqausaeizvnrijqacqlqa4yaabvp7jcl-f-d8a24c675-clienttons-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":7,"ak.ipv":6,"ak.proto":"h2","ak.rid":"9845619","ak.r":26816,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.cport":51958,"ak.gh":"23.217.52.5","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"","ak.t":"1795138635","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==YjqxsTWd6nrVGDdbl5RIALwh9r31pQStwcqHwWqqRrm+Hzpi6CUVQRa5vAUkC+9pukSt/oux9Xm/iochG+3bAtRgkss3j85eBdvg+vVr6Z+H4bpLiPMH7yQ6/tGogULs4+XRc1yPMyABj6yLTDWwv4+1pOJNkPV4kZcaBJ21F9Itroik42W2QOd06n/RiPvw47nyML2DL5mEYgHPoAMrLzf/uRXUlo3B9LO2CrG+MiEMveHzx32SEJ/jj92u0oRh94aAWQieCImoOw/DGK1yD4QQFRx22BKgKTdm5Lxgpmc6fAHnVZFr6erw5ilI2CljMJ2geVuFa+oI4i0BVWU7rpcfdnR+tgGAKl/tyfP11HESxHA1nxd3YglunHi9644eBgeXIv57ElWMwefBU5LFvLSHApyLWQXf1P9W5VtD+HE=","ak.pv":"9","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+    
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+     style="position:absolute;width:0;height:0;overflow:hidden" id="dbim-icon-sprite">
+    <defs>
+        <symbol id="icon-angle-double-left" viewBox="0 0 24 24"><path d="M11.6 4.6 4.2 12l7.4 7.4 2.2-2.2L8.6 12l5.2-5.2z"/><path d="M19 4.6 11.6 12 19 19.4l2.2-2.2L16 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-angle-double-right" viewBox="0 0 24 24"><path d="M12.4 4.6 10.2 6.8 15.4 12l-5.2 5.2 2.2 2.2L19.8 12z"/><path d="M5 4.6 2.8 6.8 8 12l-5.2 5.2L5 19.4 12.4 12z"/></symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M20.8 10.6H9.6v2.8h11.2z"/><path d="M10.8 5.6 3.2 12l7.6 6.4z"/></symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M3.2 10.6h11.2v2.8H3.2z"/><path d="M13.2 5.6 20.8 12l-7.6 6.4z"/></symbol>
+        <symbol id="icon-blogger" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6.4 2.4h11.2a4 4 0 0 1 4 4v11.2a4 4 0 0 1-4 4H6.4a4 4 0 0 1-4-4V6.4a4 4 0 0 1 4-4zm2.8 5.2a2 2 0 0 0 0 4h2.4a2 2 0 0 0 0-4zm0 5.6a2 2 0 0 0 0 4h5.6a2 2 0 0 0 0-4z"/></symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M7.6 2.4H10v2.4H7.6z"/><path d="M14 2.4h2.4v2.4H14z"/><path fill-rule="evenodd" d="M4 4.8h16a1.6 1.6 0 0 1 1.6 1.6v13.2a1.6 1.6 0 0 1-1.6 1.6H4a1.6 1.6 0 0 1-1.6-1.6V6.4A1.6 1.6 0 0 1 4 4.8zm.4 5.6v8.4h15.2v-8.4z"/><path d="M6.4 12.4h3.2v3.2H6.4z"/></symbol>
+        <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4 2.2-2.2L12.4 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M8.6 4.6 6.4 6.8 11.6 12l-5.2 5.2 2.2 2.2L16 12z"/></symbol>
+        <symbol id="icon-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/></symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24"><path d="M10.8 3h2.4v7.6h3.4L12 16.6l-4.6-6h3.4z"/><path d="M4 17.2h2.4v2.4h11.2v-2.4H20v3.2a1.4 1.4 0 0 1-1.4 1.4H5.4A1.4 1.4 0 0 1 4 20.4z"/></symbol>
+        <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M13.6 21.6v-8.4h2.8l.42-3.3h-3.22V7.8c0-.95.27-1.6 1.64-1.6h1.74V3.26a23 23 0 0 0-2.54-.13c-2.5 0-4.22 1.53-4.22 4.34v2.43H7.4v3.3h2.82v8.4z"/></symbol>
+        <symbol id="icon-fact-check" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4 3.6 5.6v6.2c0 4.6 3.4 8.6 8.4 9.8 5-1.2 8.4-5.2 8.4-9.8V5.6zm-1 13.2-3.6-3.6 1.7-1.7 1.9 1.9 4.5-4.5 1.7 1.7z"/></symbol>
+        <symbol id="icon-hashtag" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8.8 3h2.4l-1 6h3.2l1-6h2.4l-1 6h3.4v2.4h-3.8l-.6 3.2h3.6V17h-4l-1 5h-2.4l1-5h-3.2l-1 5H5.4l1-5H3V14.6h3.8l.6-3.2H3.8V9h4zm.6 8.4-.6 3.2h3.2l.6-3.2z"/></symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24"><path d="M12 3.4 2.8 11.6h2.4v8.4a1 1 0 0 0 1 1h3.3v-5.4h5v5.4h3.3a1 1 0 0 0 1-1v-8.4h2.4z"/></symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.6 2.4h8.8a5.2 5.2 0 0 1 5.2 5.2v8.8a5.2 5.2 0 0 1-5.2 5.2H7.6a5.2 5.2 0 0 1-5.2-5.2V7.6a5.2 5.2 0 0 1 5.2-5.2zm0 2.4a2.8 2.8 0 0 0-2.8 2.8v8.8a2.8 2.8 0 0 0 2.8 2.8h8.8a2.8 2.8 0 0 0 2.8-2.8V7.6a2.8 2.8 0 0 0-2.8-2.8z"/><path fill-rule="evenodd" d="M12 6.8a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 2.4a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6z"/><circle cx="17.3" cy="6.7" r="1.3"/></symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M4.8 8.8h3.6v12H4.8z"/><circle cx="6.6" cy="5.4" r="2.1"/><path d="M10.8 8.8h3.45v1.65h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.35 4.3 5.4v6.6h-3.6v-5.85c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1v5.95h-3.6z"/></symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M2.4 7.6v9.2a1.6 1.6 0 0 0 1.6 1.6h16a1.6 1.6 0 0 0 1.6-1.6V7.6L12 14z"/><path d="M21.2 5.4H2.8L12 11.8z"/></symbol>
+        <symbol id="icon-mail-open" viewBox="0 0 24 24"><path d="M2.4 9.8h19.2v9.6A1.6 1.6 0 0 1 20 21H4a1.6 1.6 0 0 1-1.6-1.6z"/><path d="M12 2.6 21.6 9.2h-3.8L12 5.3 6.2 9.2H2.4z"/><path d="m3.9 11.2 8.1 5.4 8.1-5.4 1.5 1.3-9.6 6.4-9.6-6.4z"/></symbol>
+        <symbol id="icon-map-marker" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4a7 7 0 0 0-7 7c0 5.2 7 12.2 7 12.2s7-7 7-12.2a7 7 0 0 0-7-7zm0 9.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z"/></symbol>
+        <symbol id="icon-newspaper" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.8 4.4h14.8v15.2H2.8zm2 2v11.2h10.8V6.4z"/><path d="M6 7.6h8.4v1.6H6z"/><path d="M6 10.8h8.4v1.6H6z"/><path d="M6 14h5.2v1.6H6z"/><path d="M18.4 8.4h2.8v9.6a1.4 1.4 0 0 1-2.8 0z"/></symbol>
+        <symbol id="icon-pause" viewBox="0 0 24 24"><rect x="7.4" y="4" width="3.6" height="16" rx="0.9"/><rect x="13" y="4" width="3.6" height="16" rx="0.9"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="M8 4.5v15l12-7.5z"/></symbol>
+        <symbol id="icon-picture" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.4 5.2h19.2v13.6H2.4zm2 2v9.6h15.2V7.2z"/><path d="M5.6 16.4 10 11l2.6 3 2-2.2 4 4.6z"/><circle cx="8" cy="10.4" r="1.5"/></symbol>
+        <symbol id="icon-press-conference" viewBox="0 0 24 24"><circle cx="12" cy="5.2" r="2.6"/><path d="M7.6 12.2a4.4 4.4 0 0 1 8.8 0z"/><circle cx="4.9" cy="9.6" r="2.2"/><path d="M1.8 15.2a3.1 3.1 0 0 1 6.2 0z"/><circle cx="19.1" cy="9.6" r="2.2"/><path d="M16 15.2a3.1 3.1 0 0 1 6.2 0z"/><path d="M6.6 13.6h10.8l2.2 7.8H4.4z"/></symbol>
+        <symbol id="icon-print" viewBox="0 0 24 24"><path d="M6.4 2.8h11.2v4.4H6.4z"/><path d="M4 8.4h16a1.6 1.6 0 0 1 1.6 1.6v5.6a1.6 1.6 0 0 1-1.6 1.6h-1.6v-2.8H6v2.8H4a1.6 1.6 0 0 1-1.6-1.6V10A1.6 1.6 0 0 1 4 8.4z"/><path d="M7.2 15.6h9.6v5.6H7.2z"/></symbol>
+        <symbol id="icon-rss" viewBox="0 0 24 24"><circle cx="4.8" cy="19.2" r="2.4"/><path d="M2.4 11.2v3.2a6.4 6.4 0 0 1 6.4 6.4H12A9.6 9.6 0 0 0 2.4 11.2z"/><path d="M2.4 4.8V8A13.6 13.6 0 0 1 16 21.6h3.2A16.8 16.8 0 0 0 2.4 4.8z"/></symbol>
+        <symbol id="icon-search-plus" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M10 2.8a7.2 7.2 0 1 0 0 14.4 7.2 7.2 0 0 0 0-14.4zm0 2.4a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6z"/><path d="M15.3 14.6 21.2 20.5l-1.5 1.5-5.9-5.9z"/><path d="M9.2 6.8h1.6v2.4h2.4v1.6h-2.4v2.4H9.2v-2.4H6.8V9.2h2.4z"/></symbol>
+        <symbol id="icon-share" viewBox="0 0 24 24"><circle cx="18" cy="5.6" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="18.4" r="3"/><path d="M8.3 10.9 15.7 7.2l.9 1.8-7.4 3.7z"/><path d="M9.2 13.1 16.6 16.8l-.9 1.8-7.4-3.7z"/></symbol>
+        <symbol id="icon-twitter" viewBox="0 0 24 24"><path d="M4.2 3h4.3l11.3 18h-4.3z"/><path d="M19.3 3h-2.6L4.2 21h2.6z"/></symbol>
+        <symbol id="icon-university" viewBox="0 0 24 24"><path d="M12 2.4 21.6 7.2v1.6H2.4V7.2z"/><path d="M4.8 10.4h2.4v8H4.8z"/><path d="M9.2 10.4h2.4v8H9.2z"/><path d="M13.4 10.4h2.4v8h-2.4z"/><path d="M17.6 10.4H20v8h-2.4z"/><path d="M3.2 19.8h17.6v1.8H3.2z"/></symbol>
+        <symbol id="icon-volume-up" viewBox="0 0 24 24"><path d="M3.2 9.2h3.3l5-4.2v14l-5-4.2H3.2z"/><path d="M14.6 8.4a5 5 0 0 1 0 7.2l1.6 1.6a7.2 7.2 0 0 0 0-10.4z"/><path d="M17.4 5.6a8.8 8.8 0 0 1 0 12.8l1.5 1.5a10.9 10.9 0 0 0 0-15.8z"/></symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4a9.5 9.5 0 0 0-8.1 14.5L2.4 21.6l4.8-1.4A9.5 9.5 0 1 0 12 2.4zm0 2.2a7.3 7.3 0 1 1-3.8 13.5l-.4-.2-2.6.7.7-2.5-.3-.4A7.3 7.3 0 0 1 12 4.6z"/><path d="M9.4 7.8c-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3c-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.6.7 3 .6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6 6 0 0 1-1.8-1.1 6.6 6.6 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.5z"/></symbol>
+        <symbol id="icon-youtube" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10.2 15.1V8.9l5.1 3.1z"/></symbol>
+    </defs>
+</svg>
+
+      <form method="post" action="./PressReleaseIframePage.aspx?PRID=2338313&amp;reg=48&amp;lang=2" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZPQet1wIx1Q48y3xJY2k25Y7qxH5RrQ9qQcN-OiTC9guZtri9w2&amp;t=639246315009809930" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LdIxBJXt0U_WW5GWfJqHAqo6frgCmGRfEywglicTersO2OKrFhK1gAIp0Wk2al2YrpdR3uWqH6f4nfjBsCyRUfTUUVmb0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScH645UK3RD852IErF2548Wz9Ssv0rLjB4fhVKnHcMpqkaMHpNAGOeWY02Lf4aBYN9-dVBme_SNK5KJwmFQNpMixYDZ7M0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/PressReleaseIframePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a8613aea7%3af9cec9bc%3a3202a5a2%3aab09e3fe%3a87104b7c%3a720a52bf%3a589eaa30%3aa67c2700%3abe6fb298" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8166A38A" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="pKU+CDHhKhSyKygiKSp0PW2UlRX+4CJRfEmcJCVqXnv+GEltdIdHWNk7KpaFZ0fnnAfcjPvFRe01WmW9elrxaudZqizlVuU/Bk/EVOWblbUeUe5XUzj8vnhLCaCtzQmQ4A9etClU1uKrQ7U3eyrZDymUGWTnF9qvu/d8BAFXJ5xniEPkOgi1mlQPyt0eyx1Q0vyeQKIxSjq1rfh8Y4S5xH7hBwE6FRzx+UGxajzia764MQIJ7lNjor7wJvhXpyVsE3s9pXX61ckIuQ49DfvlIv0nb6I=" />
+</div>
+                              
+            <div id="templateCss"></div>
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('sc', 'form1', ['tupdate12','update12'], [], [], 90, '');
+//]]>
+</script>
+
+            <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
+            <div class="container" style='margin-bottom: 50px;'>
+                  <div id="accessories">
+
+                        
+                        <div class="pull-right" style="display: flex">
+                              <div id="voll"></div>
+                              <div id="vollDT"></div>
+                              
+                              
+
+<span class="print-icons">
+<input type="image" name="Print1$print" id="Print1_print" aria-label="Print" src="images/printer_icon.png" alt="print page button" style="padding: 5px 10px 5px 10px;" />
+</span>
+                        </div>
+                  </div>
+                  <input type="hidden" name="hydpermid" id="hydpermid" value="2338313" />
+                  
+
+
+
+                  <div class="innner-page-main-about-us-content-right-part">
+
+                        <div id="MinistryName" class="MinistryNameSubhead text-center">
+                              Ministry of Health and Family Welfare
+                        </div>
+                        
+                        <div id="lg_g"><div class='log_oo'>  <img src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2021/aug/ph202183101.png' alt='azadi ka amrit mahotsav' /> </div></div>
+
+
+
+
+
+                        <div class="text-center event-heading-background">
+                              
+                              <h1 id="Titleh2">
+                                    Union Health Ministry Proposes Amendment to Drugs Rules, 1945 to Provide Regulatory Flexibility for Medicinal Gases, Empty Gelatin Capsules and Disinfectant Fluids
+                              </h1>
+                              <h3 id="Subtitleh3">
+                                    <span id="ltrSubtitle"><br/>Proposed amendment seeks to continue exemptions available under the pre-revised Schedule M</span>
+                              </h3>
+                        </div>
+
+                        <div id="PrDateTime" class="ReleaseDateSubHeaddateTime text-center pt20">
+                              प्रविष्टि तिथि:
+                19 NOV 2026 1:01PM by PIB Delhi
+                        </div>
+                        
+                        <div class='pt20'>
+                        </div>
+                        <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
+                        
+                        <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Union Ministry of Health and Family Welfare has proposed an amendment to the Drugs Rules, 1945, through a draft Gazette Notification G.S.R. 985 (E) dated 6<sup>th</sup> November, published in the Gazette of India to provide regulatory flexibility under the revised Schedule M for certain categories of drugs, namely medicinal gases, empty gelatin capsules and disinfectant fluids.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The proposed amendment follows representations received from stakeholders regarding the applicability of certain provisions of the revised Schedule M, notified vide G.S.R. 922(E) dated 28 December 2023, to these categories of products.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The matter was deliberated in detail by the Drugs Technical Advisory Board (DTAB) during its 93rd meeting held on 16 February 2026. The Board observed that certain requirements under the revised Schedule M may not be relevant to the manufacturing processes of medicinal gases, empty gelatin capsules and disinfectant fluids. Accordingly, it recommended the continuation of exemptions that were available to these categories under Schedule M prior to its revision.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The proposed amendment seeks to ensure that regulatory requirements are appropriately aligned with the nature and manufacturing processes of specific categories of drugs, while maintaining effective regulatory oversight. It also provides for Licensing Authorities to take product-specific decisions based on relevant scientific and practical considerations.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The proposal does not dilute the applicable standards of quality, safety or regulatory oversight. Rather, it aims to provide a pragmatic and product-specific regulatory framework while ensuring continued compliance with the applicable quality requirements.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Stakeholders and members of the public are invited to submit their objections and suggestions, if any, within the prescribed period from the date of publication of the draft notification in the Official Gazette. The comments may be addressed to the Under Secretary (Drugs), Ministry of Health and Family Welfare, Government of India, Kartavya Bhawan-1, New Delhi – 110011, or sent via email to <a style='color:black;text-decoration:none;pointer-events:none;' href=drugsdiv-mohfw[at]gov[dot]in">drugsdiv-mohfw[at]gov[dot]in</a>.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The draft Gazette Notification can be accessed at: <a href="https://egazette.gov.in/(S(v14ga5sxvesv0yfxhdm40iu0))/ViewPDF.aspx" target="_blank">https://egazette.gov.in/WriteReadData/2026/278031.pdf.aspx</a></span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">*****</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>SR</strong></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>HFW/</strong><strong>Amendments to </strong><strong>Drug Rules, 1945</strong><strong> /</strong><strong>1</strong><strong>9</strong><strong> November 2026/</strong><strong>4</strong></span></span></p>
+
+<p style="text-align:justify"> </p>
+
+<p style="text-align:justify"> </p>
+
+
+                        
+                        <div id="reel_pic">
+                        </div>
+
+
+
+                        
+                        <br />
+                        <span id="ReleaseId">(रिलीज़ आईडी: 2338313)</span>
+                        <span id="lblViews">	आगंतुक पटल  : 263</span>
+                        <div>
+                              
+                        </div>
+                        
+
+                        <span id="lblRefPhoto"></span>
+
+                        <div class="BackgroundRelease">
+                              
+                        </div>
+                        <div>
+                              
+                        </div>
+                        <div class="ReleaseLang">इस विज्ञप्ति को इन भाषाओं में पढ़ें: 
+                        
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2338387' target="_blank">
+                                          Urdu </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2338382' target="_blank">
+                                          हिन्दी </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2338439' target="_blank">
+                                          Assamese </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2338373' target="_blank">
+                                          Gujarati </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2338687' target="_blank">
+                                          Tamil </a>
+                              
+                        </div>
+
+                        <div class="RelTag">
+                              <ul>
+                                    
+                              </ul>
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div id="RelLink" class="RelLink">
+                              <ul>
+                                    
+                                    
+                              </ul>
+                        </div>
+                        <center>
+                              
+                        </center>
+                  </div>
+
+                  <div id="update12">
+	
+                              
+                              <input type="hidden" name="Hidden" id="Hidden" />
+                              <div id="P_CategoryManagement" class="ModalWindow" style="border-width:0px;height:60%;width:60%;overflow:auto;display: none">
+		
+                                    <div>
+                                          <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
+                                    </div>
+                                    <div id="description">
+                                    </div>
+                                    <div class="text-center">
+                                          <h2>
+                                                
+                                                <br>
+                                                
+                                          </h2>
+                                    </div>
+                                    <br />
+                                    <div class="clear">
+                                    </div>
+                                    
+                              
+	</div>
+                        
+</div>
+            </div>
+            
+            <div id="PdfDiv" style="display: none;">
+                  <table width="100%">
+                        <tr>
+                              <td style="font-weight: 200; text-align: center">
+                                    Ministry of Health and Family Welfare
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          Union Health Ministry Proposes Amendment to Drugs Rules, 1945 to Provide Regulatory Flexibility for Medicinal Gases, Empty Gelatin Capsules and Disinfectant Fluids
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          <div style='height:30px;width:100%;'></div>Proposed amendment seeks to continue exemptions available under the pre-revised Schedule M
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="text-align: center; font-size: 14px;">
+                                          प्रविष्टि तिथि:
+                        19 NOV 2026 1:01PM by PIB Delhi
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: left; font-size: 16px;">
+                                          <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Union Ministry of Health and Family Welfare has proposed an amendment to the Drugs Rules, 1945, through a draft Gazette Notification G.S.R. 985 (E) dated 6<sup>th</sup> November, published in the Gazette of India to provide regulatory flexibility under the revised Schedule M for certain categories of drugs, namely medicinal gases, empty gelatin capsules and disinfectant fluids.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The proposed amendment follows representations received from stakeholders regarding the applicability of certain provisions of the revised Schedule M, notified vide G.S.R. 922(E) dated 28 December 2023, to these categories of products.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The matter was deliberated in detail by the Drugs Technical Advisory Board (DTAB) during its 93rd meeting held on 16 February 2026. The Board observed that certain requirements under the revised Schedule M may not be relevant to the manufacturing processes of medicinal gases, empty gelatin capsules and disinfectant fluids. Accordingly, it recommended the continuation of exemptions that were available to these categories under Schedule M prior to its revision.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The proposed amendment seeks to ensure that regulatory requirements are appropriately aligned with the nature and manufacturing processes of specific categories of drugs, while maintaining effective regulatory oversight. It also provides for Licensing Authorities to take product-specific decisions based on relevant scientific and practical considerations.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The proposal does not dilute the applicable standards of quality, safety or regulatory oversight. Rather, it aims to provide a pragmatic and product-specific regulatory framework while ensuring continued compliance with the applicable quality requirements.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Stakeholders and members of the public are invited to submit their objections and suggestions, if any, within the prescribed period from the date of publication of the draft notification in the Official Gazette. The comments may be addressed to the Under Secretary (Drugs), Ministry of Health and Family Welfare, Government of India, Kartavya Bhawan-1, New Delhi – 110011, or sent via email to <a style='color:black;text-decoration:none;pointer-events:none;' href=drugsdiv-mohfw[at]gov[dot]in">drugsdiv-mohfw[at]gov[dot]in</a>.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The draft Gazette Notification can be accessed at: <a href="https://egazette.gov.in/(S(v14ga5sxvesv0yfxhdm40iu0))/ViewPDF.aspx" target="_blank">https://egazette.gov.in/WriteReadData/2026/278031.pdf.aspx</a></span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">*****</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>SR</strong></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>HFW/</strong><strong>Amendments to </strong><strong>Drug Rules, 1945</strong><strong> /</strong><strong>1</strong><strong>9</strong><strong> November 2026/</strong><strong>4</strong></span></span></p>
+
+<p style="text-align:justify"> </p>
+
+<p style="text-align:justify"> </p>
+
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 100; text-align: left; font-size: 16px;">
+                                          (रिलीज़ आईडी: 2338313)
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+                        </tr>
+                  </table>
+            </div>
+            <div class="clearfix">
+            </div>
+
+            
+
+            <div class="section1">
+                  <div id="frst_t">
+                        <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=2338313' target='_blank'><li class='fb_b'   ></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=2338313&text=Union Health Ministry Proposes Amendment to Drugs Rules, 1945 to Provide Regulatory Flexibility for Medicinal Gases, Empty Gelatin Capsules and Disinfectant Fluids' target='_blank'><li class='twitter_r'  > </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=2338313' target='_blank'><li class='whatsapp_r'  ></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Union Health Ministry Proposes Amendment to Drugs Rules, 1945 to Provide Regulatory Flexibility for Medicinal Gases, Empty Gelatin Capsules and Disinfectant Fluids&body=https://pib.gov.in/PressReleasePage.aspx?PRID=2338313&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=2338313&title=Union Health Ministry Proposes Amendment to Drugs Rules, 1945 to Provide Regulatory Flexibility for Medicinal Gases, Empty Gelatin Capsules and Disinfectant Fluids&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ></li></a></ul></div></div>
+                  </div>
+                  <div id="second_t">
+                        <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=2338313' target='_blank'><li class='fb_b'   ></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=2338313&text=Union Health Ministry Proposes Amendment to Drugs Rules, 1945 to Provide Regulatory Flexibility for Medicinal Gases, Empty Gelatin Capsules and Disinfectant Fluids' target='_blank'><li class='twitter_r'  > </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=2338313' target='_blank'><li class='whatsapp_r'  ></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Union Health Ministry Proposes Amendment to Drugs Rules, 1945 to Provide Regulatory Flexibility for Medicinal Gases, Empty Gelatin Capsules and Disinfectant Fluids&body=https://pib.gov.in/PressReleasePage.aspx?PRID=2338313&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=2338313&title=Union Health Ministry Proposes Amendment to Drugs Rules, 1945 to Provide Regulatory Flexibility for Medicinal Gases, Empty Gelatin Capsules and Disinfectant Fluids&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ></li></a></ul></div></div>
+                  </div>
+            </div>
+            <input type="hidden" name="ltrTitlee" id="ltrTitlee" value="Union Health Ministry Proposes Amendment to Drugs Rules, 1945 to Provide Regulatory Flexibility for Medicinal Gases, Empty Gelatin Capsules and Disinfectant Fluids" />
+            <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" value="&lt;br/>Proposed amendment seeks to continue exemptions available under the pre-revised Schedule M" />
+            <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Union Ministry of Health and Family Welfare has proposed an amendment to the Drugs Rules, 1945, through a draft Gazette Notification G.S.R. 985 (E) dated 6th November, published in the Gazette of India to provide regulatory flexibility under the revised Schedule M for certain categories of drugs, namely medicinal gases, empty gelatin capsules and disinfectant fluids.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The proposed amendment follows representations received from stakeholders regarding the applicability of certain provisions of the revised Schedule M, notified vide G.S.R. 922(E) dated 28 December 2023, to these categories of products.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The matter was deliberated in detail by the Drugs Technical Advisory Board (DTAB) during its 93rd meeting held on 16 February 2026. The Board observed that certain requirements under the revised Schedule M may not be relevant to the manufacturing processes of medicinal gases, empty gelatin capsules and disinfectant fluids. Accordingly, it recommended the continuation of exemptions that were available to these categories under Schedule M prior to its revision.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The proposed amendment seeks to ensure that regulatory requirements are appropriately aligned with the nature and manufacturing processes of specific categories of drugs, while maintaining effective regulatory oversight. It also provides for Licensing Authorities to take product-specific decisions based on relevant scientific and practical considerations.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The proposal does not dilute the applicable standards of quality, safety or regulatory oversight. Rather, it aims to provide a pragmatic and product-specific regulatory framework while ensuring continued compliance with the applicable quality requirements.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Stakeholders and members of the public are invited to submit their objections and suggestions, if any, within the prescribed period from the date of publication of the draft notification in the Official Gazette. The comments may be addressed to the Under Secretary (Drugs), Ministry of Health and Family Welfare, Government of India, Kartavya Bhawan-1, New Delhi – 110011, or sent via email to &lt;a href=&quot;mailto:drugsdiv-mohfw@gov.in&quot;>drugsdiv-mohfw@gov.in&lt;/a>.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The draft Gazette Notification can be accessed at: &lt;a href=&quot;https://egazette.gov.in/(S(v14ga5sxvesv0yfxhdm40iu0))/ViewPDF.aspx&quot; target=&quot;_blank&quot;>https://egazette.gov.in/WriteReadData/2026/278031.pdf.aspx&lt;/a>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>*****&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>SR&lt;/strong>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>HFW/&lt;/strong>&lt;strong>Amendments to &lt;/strong>&lt;strong>Drug Rules, 1945&lt;/strong>&lt;strong> /&lt;/strong>&lt;strong>1&lt;/strong>&lt;strong>9&lt;/strong>&lt;strong> November 2026/&lt;/strong>&lt;strong>4&lt;/strong>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;> &lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;> &lt;/p>
+" />
+            <script type="text/javascript">
+                  var mPlayer = document.getElementById("background_music");
+                  var mPlayAction = document.getElementById("playbutton");
+
+                  var isPlaying = false;
+
+                  function playAudio() {
+                        mPlayer.play();
+                        isPlaying = true;
+                        document.getElementById('stopA').style.display = "block";
+                        document.getElementById('playA').style.display = "none";
+                  }
+
+                  function pauseAudio() {
+                        mPlayer.pause();
+                        isPlaying = false;
+                        document.getElementById('playA').style.display = "block";
+                        document.getElementById('stopA').style.display = "none";
+                  }
+                  //function HandleAudio() {
+                  //    if (isPlaying == true) {
+                  //        //Playing already Pause it
+                  //        pauseAudio();
+                  //    } else {
+                  //        //Play the music
+                  //        playAudio();
+                  //    }
+                  //}
+            </script>
+            <script type="text/javascript">
+                  var synth = window.speechSynthesis;
+
+            
+                  function CleanHtml(html) {
+
+                        html = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+
+                        return html;
+                  }
+                  function stripHtml(html) {
+                        let tmp = document.createElement("DIV");
+                        tmp.innerHTML = CleanHtml(html);
+                        return tmp.textContent || tmp.innerText || "";
+                  }
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        //for responsive tables
+                        $("table").each(function () {
+                              if (!$(this).closest(".table-responsive").length) {
+                                    $(this).wrap("<div class='table-responsive'></div>");
+                              }
+                        });
+
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            
+            <style type="text/css">
+                  @media print {
+                        .sticky-social, .sticky-social_mb, .pull-right, #printPDF {
+                              display: none !important;
+                        }
+                  }
+
+                  .f_vl {
+                        padding-right: 30px;
+                        font-size: 17px;
+                        cursor: pointer;
+                  }
+
+                  .log_oo {
+                        // width: 20%;
+                        display: flex;
+                        justify-content: space-between;
+                  }
+
+                        .log_oo img {
+                              width: 150px;
+                              /*width: 100%;
+                    height: auto;*/
+                        }
+
+                  .sticky-social_mb {
+                        position: fixed;
+                        bottom: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                        width: 100%;
+                  }
+
+                  .social_mb {
+                        list-style: none;
+                        display: flex;
+                        width: 100%;
+                        margin-bottom: -8px;
+                  }
+
+                        .social_mb a {
+                              padding: 8px 0px;
+                              font-size: 30px;
+                              transition: all 0.8s ease-in-out;
+                              width: 20% !important;
+                              text-align: center;
+                        }
+            </style>
+            <style type="text/css">
+                  .section1 {
+                        position: relative;
+                        padding: 10px 0px;
+                        width: 100%;
+                  }
+
+
+
+                  .sticky-social {
+                        position: fixed;
+                        top: 20px;
+                        left: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                  }
+
+                  .social {
+                        list-style: none;
+                  }
+
+                        .social a li {
+                              padding: 8px 12px;
+                              font-size: 25px;
+                              transition: all 0.8s ease-in-out;
+                        }
+
+                              .social a li:hover {
+                                    margin-right: -30px;
+                                    box-shadow: 2px 5px 10px grey;
+                              }
+
+                                    .social a li:hover .fa {
+                                          margin-left: 20px;
+                                    }
+
+                  .fb_b {
+                        /* background-color: var(--dbim-key, #0F5757);*/
+                        background-color: var(--dbim-key, #0F5757);
+                  }
+
+                  .twitter_r {
+                        /* background-color: rgb(29, 161, 242);*/
+                        background-color: var(--dbim-key, #0F5757);
+                  }
+
+                  .whatsapp_r {
+                        /* background-color: var(--dbim-key, #0F5757);*/
+                        background-color: var(--dbim-key, #0F5757);
+                  }
+
+                  .fa-envelope_r {
+                        /* background-color: var(--dbim-key, #0F5757);*/
+                        background-color: var(--dbim-key, #0F5757);
+                  }
+
+                  .fa-linkedin_r {
+                        background-color: var(--dbim-key, #0F5757);
+                  }
+            </style>
+            <style type="text/css">
+                  @media only screen and (max-device-width: 767px) {
+                        p span img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        p img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        h2 {
+                              font-size: var(--dbim-h2, 20px);   /* was 20px !important - the !important blocked A+/A- */
+                              font-weight: 600 !important;
+                        }
+
+                        h3 {
+                              font-size: var(--dbim-h3, 16px);   /* was 16px !important */
+                              font-weight: 600 !important;
+                        }
+                  }
+            </style>
+            <style type="text/css">
+                  /* === Film Roll Badge Styling(IFFI2025 countdown) === */
+                  .film-roll-badge {
+                        position: absolute;
+                        top:82%;
+                        right: 20px;
+                        width: 230px;
+                        height: 70px;
+                        background: repeating-linear-gradient( to right, var(--dbim-green-key, #0F5757) 0px, var(--dbim-green-key, #0F5757) 18px, var(--dbim-text, #150202) 18px, var(--dbim-text, #150202) 36px );
+                        border-top: 8px solid var(--dbim-green-key, #0F5757);
+                        border-bottom: 8px solid var(--dbim-green-key, #0F5757);
+                        border-radius: 8px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                        animation: moveFilm 8s linear infinite;
+                        z-index: 10;
+                  }
+
+                        /* film sprocket holes */
+                        .film-roll-badge::before,
+                        .film-roll-badge::after {
+                              content: "";
+                              position: absolute;
+                              width: 100%;
+                              height: 10px;
+                              background: repeating-linear-gradient( to right, var(--dbim-green-key, #0F5757) 0px, var(--dbim-green-key, #0F5757) 10px, #fff 10px, #fff 20px );
+                              left: 0;
+                              z-index: 2;
+                        }
+
+                        .film-roll-badge::before {
+                              top: -4px;
+                        }
+
+                        .film-roll-badge::after {
+                              bottom: -4px;
+                        }
+
+                  .film-roll-inner {
+                        position: relative;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        animation: flicker 2s infinite ease-in-out;
+                  }
+
+                  .countdown-text {
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        color: #fff;
+                        text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 10px #000;
+                        white-space: nowrap;
+                  }
+
+                  /* === Animations === */
+                  @keyframes moveFilm {
+                        0% {
+                              background-position: 0 0;
+                        }
+
+                        100% {
+                              background-position: 120px 0;
+                        }
+                  }
+
+                  @keyframes flicker {
+                        0%, 100% {
+                              opacity: 1;
+                        }
+
+                        50% {
+                              opacity: 0.9;
+                        }
+
+                        25% {
+                              opacity: 0.95;
+                        }
+
+                        75% {
+                              opacity: 0.85;
+                        }
+                  }
+
+                  /* === Responsive Adjustments === */
+                  @media (max-width: 1500px) {
+                        .film-roll-badge {
+                              top: 68%;
+                              right: 18px;
+                              /* width: 220px; */
+                              height: 65px;
+                              font-size: 0.85rem;
+                        }
+
+                        .press-section {
+                              margin-top: 35px;
+                        }
+                  }
+
+                  @media (max-width: 992px) {
+                        .film-roll-badge {
+                              top: 52%;
+                              right: 10px;
+                               width: 200px; 
+                              height: 60px;
+                        }
+                  }
+
+                  @media (max-width: 768px) {
+                        .film-roll-badge {
+                              top: 56%;
+                              right: 10px;
+                               width: 124px; 
+                              height: 55px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.9rem;
+                        }
+                  }
+
+                  @media (max-width: 576px) {
+                        .film-roll-badge {
+                              top: 59%;
+                              right: 5px;
+                              /* width: 160px; */
+                              height: 50px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.85rem;
+                        }
+                  }
+            </style>
+                        <script type="text/javascript">
+                  const festivalStart = new Date("2025-11-20T00:00:00").getTime();
+                  const festivalEnd = new Date("2025-11-28T23:59:59").getTime();
+
+                  const countdownElement = document.getElementById("countdown");
+
+                  const interval = setInterval(() => {
+                        const now = new Date().getTime();
+
+                        // BEFORE FESTIVAL — show days + hours left
+                        if (now < festivalStart) {
+                              const diff = festivalStart - now;
+                              const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                              const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                              countdownElement.innerHTML = `
+                ${days} Day${days !== 1 ? 's' : ''} 
+                ${hours} Hour${hours !== 1 ? 's' : ''} to go
+            `;
+
+                        }
+
+                        // DURING FESTIVAL — show 56th IFFI - Day X
+                        else if (now >= festivalStart && now <= festivalEnd) {
+                              const dayNumber = Math.floor((now - festivalStart) / (1000 * 60 * 60 * 24)) + 1;
+                              countdownElement.innerHTML = `56th IFFI - Day ${dayNumber}`;
+                        }
+
+                        // AFTER FESTIVAL — new message
+                        else {
+                              countdownElement.innerHTML = `✨ IFFI closes but never ends…`;
+
+                              // Width change logic
+                              const elements = document.querySelectorAll('.film-roll-badge');
+                              elements.forEach(el => el.style.width = "350px");
+
+                              clearInterval(interval);
+                        }
+
+                  }, 1000);
+            </script>
+
+      
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleaseIframePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
+</script>
+</form>
+      
+      
+
+<script type="application/json" id="pibConsentConfig">{"ga4Id":"G-Q414Y0X6EE,G-QJJ6LZ8LHV","policyUrl":"/CookiePolicy.aspx","text":{"bannerLabel":"कुकी सहमति","title":"इस वेबसाइट पर कुकीज़","body":"इस वेबसाइट को चलाने के लिए हम आवश्यक कुकीज़ का उपयोग करते हैं। आपके आने पर हम विश्लेषण कुकीज़ भी सेट करते हैं, ताकि हम देख सकें कि साइट का उपयोग कैसे हो रहा है और उसे बेहतर बना सकें - आप इन्हें नीचे या कभी भी कुकी नीति पृष्ठ से बंद कर सकते हैं। सोशल मीडिया सामग्री की कुकीज़ केवल आपकी अनुमति से ही सेट की जाती हैं।","policyLink":"हमारी कुकी नीति पढ़ें","accept":"सभी स्वीकार करें","reject":"वैकल्पिक अस्वीकार करें","customize":"अनुकूलित करें","prefsTitle":"कुकी प्राथमिकताएं","prefsIntro":"चुनें कि यह वेबसाइट कौन सी कुकीज़ सेट कर सकती है। आवश्यक कुकीज़ बंद नहीं की जा सकतीं क्योंकि उनके बिना साइट काम नहीं करती। विश्लेषण कुकीज़ तब तक चालू रहती हैं जब तक आप उन्हें बंद न करें। सोशल मीडिया कुकीज़ तब तक बंद रहती हैं जब तक आप अनुमति न दें। आप ये विकल्प कभी भी कुकी नीति पृष्ठ से बदल सकते हैं।","essentialName":"आवश्यक कुकीज़","essentialDesc":"साइट के कार्य करने के लिए आवश्यक। ये आपका सत्र, आपकी भाषा और क्षेत्र, आपके पाठ का आकार और रंग थीम याद रखती हैं, तथा फ़ॉर्म की सुरक्षा जांच सत्यापित करती हैं। ये हमेशा चालू रहती हैं।","analyticsName":"विश्लेषण कुकीज़","analyticsDesc":"ये हमें यह समझने में मदद करती हैं कि आगंतुक साइट का उपयोग कैसे करते हैं - कौन से पृष्ठ पढ़े जाते हैं और लोग कितनी देर रुकते हैं - ताकि इसे बेहतर बनाया जा सके। यह जानकारी ऐसे रूप में एकत्र की जाती है जो सीधे आपकी पहचान नहीं करती। आपके आने पर ये चालू रहती हैं; इन्हें यहां बंद करने पर ये रुक जाती हैं और पहले से सेट कुकीज़ हटा दी जाती हैं।","socialName":"सोशल मीडिया कुकीज़","socialDesc":"ये X, फेसबुक और यूट्यूब से एम्बेड की गई सामग्री, जैसे टाइमलाइन और वीडियो, द्वारा सेट की जाती हैं। ये प्लेटफ़ॉर्म इनका उपयोग विभिन्न वेबसाइटों पर आपको ट्रैक करने के लिए कर सकते हैं। ये तब तक बंद रहती हैं जब तक आप अनुमति न दें।","save":"प्राथमिकताएं सहेजें","cancel":"रद्द करें"}}</script>
+<script type="text/javascript" src='/js/consent.js?v=10'></script>
+
+<script type="text/javascript" src='/js/consent-embeds.js?v=10'></script>
+
+    
+</body>
+</html>
